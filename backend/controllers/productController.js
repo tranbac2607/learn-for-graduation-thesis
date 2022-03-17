@@ -6,6 +6,7 @@ const ApiFeatures = require('../utils/apifeatures');
 // Create Product -- Admid
 exports.createProduct = catchAsyncError(async (req, res, next) => {
 
+    req.body.user = req.user.id;
     const product = await Product.create(req.body);
     res.status(201).json({
         success: true,
@@ -14,7 +15,7 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 });
 
 // Get All Product
-exports.getAllProduct = catchAsyncError(async (req, res) => {
+exports.getAllProducts = catchAsyncError(async (req, res) => {
 
     const resultPerPage = 5;
     const productCount = await Product.countDocuments();
