@@ -1,5 +1,5 @@
 const Product = require('../models/productModel');
-const ErrorHandler = require('../utils/errorHander');
+const ErrorHander = require('../utils/errorHander');
 const catchAsyncError = require('../middleware/catchAsyncError');
 const ApiFeatures = require('../utils/apifeatures');
 
@@ -38,7 +38,7 @@ exports.getProductDetails = catchAsyncError(async (req, res, next) => {
     const product = await Product.findById(req.params.id);
 
     if (!product) {
-        return next(new ErrorHandler('Product not found', 404));
+        return next(new ErrorHander('Product not found', 404));
     }
 
     res.status(200).json({
@@ -54,7 +54,7 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
     let product = await Product.findById(req.params.id);
 
     if (!product) {
-        return next(new ErrorHandler('Product not found', 404));
+        return next(new ErrorHander('Product not found', 404));
     }
 
     product = await Product.findByIdAndUpdate(req.params.id, req.body, {
@@ -75,7 +75,7 @@ exports.deleteProduct = catchAsyncError(async (req, res, next) => {
     const product = await Product.findById(req.params.id);
 
     if (!product) {
-        return next(new ErrorHandler('Product not found', 404));
+        return next(new ErrorHander('Product not found', 404));
     }
 
     await product.remove();
