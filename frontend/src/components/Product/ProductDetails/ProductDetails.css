@@ -1,0 +1,253 @@
+.product-details {
+    background-color: rgb(214, 214, 214);
+    width: 100vw;
+    max-width: 100%;
+    padding: 6vmax;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.product-details__block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2vmax;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+
+.product-details__block-left {
+    align-items: center;
+}
+
+.carousel-image {
+    width: 30vmax;
+}
+
+.product-details__block-right {
+    align-items: flex-start;
+}
+
+.product-details__name {
+    color: rgb(54, 54, 54);
+    font: 600 1.6vmax 'Roboto';
+}
+
+.product-details__id {
+    color: rgba(54, 54, 54, .6);
+    font: 200 .6vmax cursive;
+}
+
+.product-details__block-two {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    width: 70%;
+    padding: 1vmax 0;
+}
+
+.product-details__num-of-reviews {
+    color: rgba(0, 0, 0, 0.7);
+    font: 200 .8vmax cursive;
+    margin-left: 1vmax;
+}
+
+.product-details__block-three {
+    width: 70%;
+}
+
+.product-details__price {
+    color: rgba(17, 17, 17, .8);
+    font: 400 1.8vmax 'Franklin Gothic Medium';
+    margin: 1vmax 0;
+}
+
+.product-details__block-three__one {
+    display: flex;
+    align-items: center;
+}
+
+.product-details__button__add-sub {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5vmax;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+}
+
+.product-details__button__add-sub:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.product-details__enter {
+    border: none;
+    padding: 0.4vmax;
+    width: 3vmax;
+    text-align: center;
+    outline: none;
+    font: 400 0.8vmax "Roboto";
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.product-details__add-to-cart {
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+    background-color: tomato;
+    font: 500 0.7vmax "Roboto";
+    border-radius: 20px;
+    padding: 0.5vmax 2vmax;
+    margin: 1vmax;
+    outline: none;
+}
+
+.product-details__add-to-cart:hover {
+    background-color: rgb(214, 84, 61);
+}
+
+.product-details__status {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1vmax 0;
+    color: rgba(0, 0, 0, .65);
+    font: 400 1vmax 'Roboto';
+    margin: 1vmax 0;
+}
+
+.product-details__block-four {
+    color: rgba(0, 0, 0, .9);
+    font: 500 1.2vmax sans-serif;
+}
+
+.product-details__description {
+    color: rgba(0, 0, 0, .55);
+    font: 300 .8vmax sans-serif;
+}
+
+.submit-review {
+    border: none;
+    background-color: tomato;
+    font: 500 .7vmax 'Roboto';
+    border-radius: 20px;
+    padding: .6vmax 2vmax;
+    margin: 1vmax 0;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    outline: none;
+}
+
+.submit-review:hover {
+    background-color: rgb(197, 68, 45);
+    transform: scale(1.1);
+}
+
+.reviews__heading {
+    color: #000000be;
+    font: 500 1.4vmax "Roboto";
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    padding: 1vmax;
+    width: 20vmax;
+    margin: auto;
+    margin-bottom: 4vmax;
+}
+
+.reviews {
+    display: flex;
+    overflow: auto;
+}
+
+.no-reviews {
+    font: 400 1.3vmax "Gill Sans";
+    text-align: center;
+    color: rgba(0, 0, 0, 0.548);
+}
+
+@media screen and (max-width: 600px) {
+    
+    .product-details {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .product-details__block-right {
+        align-items: center;
+    }
+
+    .product-details__name {
+        font-size: 2.8vmax;
+        text-align: center;
+    }
+
+    .product-details__id {
+        text-align: center;
+        font-size: 1vmax;
+    }
+
+    .product-details__block-two {
+        justify-content: center;
+    }
+
+    .product-details__num-of-reviews {
+        font-size: 1.5vmax;
+    }
+    
+    .product-details__price {
+        font: 700 3vmax 'Franklin Gothic Medium';
+        text-align: center;
+    }
+
+    .product-details__block-three__one {
+        flex-direction: column;
+    }
+
+    .product-details__block-three__one-one {
+        padding: 2vmax 0;
+    }
+
+    .product-details__button__add-sub {
+        padding: 1.2vmax;
+        width: 4vmax;
+    }
+
+    .product-details__enter {
+        padding: 1.5vmax;
+        width: 5vmax;
+        font: 400 1.8vmax 'Roboto';
+    }
+
+    .product-details__add-to-cart {
+        font: 500 1.7vmax 'Roboto';
+        padding: 1.5vmax;
+        width: 20vmax;
+        margin: 3vmax 0;
+    }
+
+    .product-details__status {
+        padding: 2.5vmax 0;
+        text-align: center;
+        font: 400 2vmax "Roboto";
+    }
+
+    .product-details__block-four {
+        font: 500 2.5vmax sans-serif;
+    }
+
+    .product-details__description {
+        font: 300 1.8vmax sans-serif;
+    }
+
+    .submit-review {
+        font: 500 1.7vmax "Roboto";
+        padding: 1.5vmax;
+        width: 20vmax;
+        margin: 3vmax 0;
+    }
+}
+
