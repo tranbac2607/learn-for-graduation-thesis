@@ -5,6 +5,7 @@ const sendToken = require('../utils/jwtToken');
 const sendEmail = require('../utils/sendEmail');
 const crypto = require('crypto');
 
+// Register User
 exports.registerUser = catchAsyncError(async (req, res, next) => {
 
     const { name, email, password } = req.body;
@@ -189,7 +190,7 @@ exports.getAllUsers = catchAsyncError(async (req, res, next) => {
     res.status(200).json({
         success: true,
         users,
-    })
+    });
 });
 
 // Get One Users -- Admin
@@ -225,10 +226,11 @@ exports.updateUserRole = catchAsyncError(async (req, res, next) => {
 
     res.status(200).json({
         success: true,
+        user,
     });
 });
 
-// Delte User -- Admin
+// Delete User -- Admin
 exports.deleteUser = catchAsyncError(async (req, res, next) => {
 
     const user = await User.findById(req.params.id);
